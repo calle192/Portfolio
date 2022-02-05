@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Dont Click It</title>
+  <script type="text/javascript">
+  //<!--
+  //<![CDATA[
+    defstop = document.getElementById("def");
+    function buttonHandler(){
+     this.event.preventDefault();
+     alert("Stop that!");
+    };
+      
+  //]]>
+  // --> 
+  </script>
+ 
+ </head>
+ <body>
+  <nav><a id = "def" onclick="buttonHandler();"  href="index.html">"Do not click here."</a></nav>
+ </body>
+</html>

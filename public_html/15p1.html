@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Stacking Images</title>
+   <meta charset="UTF-8"/>
+  
+
+   <style type= "text/css">
+    #nav { border: 1px solid black;
+           background-color:grey;}
+    
+   body {background-color: lightgrey;}
+    h1 {position: relative;
+        top:395px;     
+        margin: auto;
+        border: black solid 1px;
+        width: 500px;
+        background-color: tan;}
+
+    p {position: relative;
+       top: 400px;
+       width: 800px;
+       margin: auto;
+       border: black solid 1px;
+       background-color: white;}
+
+    img { position: absolute;
+          top:20px;
+          left:20px;
+          overflow:auto;
+          float:left; }
+    
+    #view {position:relative;
+           width: 364px;
+            margin: auto;}
+        
+    #button {position: absolute;
+             top:298px;
+             left:80px;
+             overflow:auto;
+             margin: 10px;
+             clear:left;
+             width: 364px;
+            }    
+   </style>
+ 
+  </head>
+<body>
+<div id = "nav">
+<nav>
+ <a href= "index.html">Home Page</a>
+</nav>
+</div>
+
+
+ 
+ <script type="text/javascript">
+ <!--
+ //<![CDATA[
+
+ function cT(){
+  document.getElementById("pitchfork").style.visibility = "hidden";
+  document.getElementById("chisel").style.visibility="visible";
+  document.getElementById("hoe").style.visibility ="hidden";
+ };
+
+ function hT(){
+  document.getElementById("pitchfork").style.visibility="hidden";
+  document.getElementById("chisel").style.visiblity="hidden";
+  document.getElementById("hoe").style.visibility="visible";
+ };
+
+ function pT(){
+  document.getElementById("pitchfork").style.visibility="visible";
+  document.getElementById("chisel").style.visibility="hidden";
+  document.getElementById("hoe").style.visibility="hidden";
+ };
+ //]]>
+ //-->>
+</script>
+<div id="view">  
+  <img src="/tools/chisels.jpg"
+     id = "chisel"
+     style="visibility: visible"
+     width="364"
+     height="248"
+     alt="Picture of a chisel">
+  
+ 
+  <img src="/tools/pitchfork.jpg"
+     id = "pitchfork"
+     style="visibility: hidden"
+     width= "364"
+     height="248"
+     alt="Picture of a pitchfork">
+
+ 
+  <img src="/tools/hoe.jpg"
+       id = "hoe"
+       style="visibility: hidden"
+       width="364"
+       height="248"
+       alt="picture of a hoe">
+  <div id="button">
+  <input type="button" value="Chisel" onclick = "cT();">
+  <input type="button" value ="pitch Fork" onclick = "pT();">
+  <input type="button" value= "Hoe" onclick="hT();">
+ </div>
+</div>
+<h1>I Positioned With Visibility</h1>
+<p> I chose to use the visibility attribute. Origionally I wanted to use z.index because it was similiar to the sort of programming I've used in the past with C# and java.
+    zindex uses a numeric value to decide which image is on top. Generally speaking thats how I make most functions/ methods that contain loops or make decisions. I wanted to do something different this time. 
+    Visiblity is technically simpilar that zindex. All you have to do is assign a value of either hidden or visible. you do this in the javascript function by declaring 
+   getElementById(idName).style.visibility = "value";. You place either "hidden" or "visible" where I wrote value and that controls which image is seen. 
+</p>
+
+</body>
+</html>

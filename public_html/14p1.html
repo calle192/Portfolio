@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Javascript Loops and Document.write()</title>
+   <meta charset="UTF-8">
+   <script type="text/javascript">
+    <!--
+    //<![CDATA[
+     var  d = 9;
+     var  a = 7;
+     var  tbl = "<table>";
+     for (var i = 0; i < 20; i++){
+      a += d;
+      tbl += "<tr><td>"+a+"</tr></td>";
+      
+     }
+     tbl += "</table>";
+     document.write(tbl);
+   
+    //]]>
+    // -->
+   </script>
+  
+ </head>
+ <body>
+  <nav>
+   <a href="index.html">Home</a>
+  </nav>
+  <h3>What would I do to print 30 terms instead of the 20 printed?</h3>
+
+  <p>
+   For my code, all I have to do is change the for loop to say for(var i = 0; i &lt; 20; i++)
+  </p>
+  <h3>Why use document.write() instead of alert()?</h3>
+  <p>using alert will have a pop up come up. This pop-up will print all the tags for the
+     table instead of creating the table. The document.write() places the values on the
+     document as well as uses the provided table tags to create a table.
+  </p>  
+ </body>
+</html>

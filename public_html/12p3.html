@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Order Form</title>
+  <meta charset= "UTF-8">
+  <style type = "text/css">
+  </style>
+ </head>
+ <header>
+  <nav>
+   <a href="index.html">Home</a>
+  </nav>
+ </header>
+
+  <main>
+   <form
+     action= "/formtest.php"
+     method= "post" >
+    <label>Chisel
+     <input type="number" name="number_chisel"
+      id="number_chisel" />
+    </label><br>
+    <label>Pitchfork
+     <input type="number" name="number_pitchfork"
+       id="number_pitchfork" size="5"/>
+    </label><br>
+    <label>Hoe
+     <input type="number" name="number_hoe"
+       id="number_hoe" size="5"/>
+    </label><br> 
+    <label>First Name
+     <input type="text"
+      name="firstName" id="firstName"
+      size="25"/>
+    </label><br>
+    <label>Last Name
+     <input type="text"
+      name="lastName" id="lastName"
+      size="25"/>
+    </label><br>
+    <label>Address
+     <input type="text" name="address" id="address" size= "30"/>
+    </label><br>
+    <label>City
+     <input type="text" name="city" id="city" size="25"/>
+    </label><br>
+    <label>State
+      <input type="text" id="state" name="state" size="25"/>
+    </label><br>
+    <label>Zip
+     <input type="text" name="zip" id="zip" size="20"/>
+    </label><br>
+    <label>Visa:
+     <input type="radio" name="preferPayment" id="preferPayment_v" value="Visa" checked />
+    </label><br>
+    <label>Mastercard
+      <input type="radio" name="preferPayment" id="preferPayment_mc" value="Mastercard" />
+    </label><br>
+    <label>American Express
+      <input type="radio" name="preferPayment" id="preferPayment_ae" value="americanexpres"/>
+    </label><br>
+    <input type="submit"
+     value="Submit">
+
+   </form>
+  </main>
+ 
+</html>

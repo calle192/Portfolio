@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Order Form</title>
+  <meta charset= "UTF-8">
+  <script type = "text/javascript">
+  <!--
+  //<![CDATA[
+   function verify(){
+    
+    var email = document.getElementById("email").value;
+    var correct = email.match(/[a-zA_Z0-9\-_]+[a-zA-Z0-9\-_]+\@{1}\w+\.{1}\w+/);
+   if (correct == email){
+      return(true);
+   }
+   else{
+    this.event.preventDefault();
+    alert(email + " is not a valid email address.");
+   }
+   };
+  //]]>
+  //--> 
+  </script>
+ </head>
+ <header>
+  <nav>
+   <a href="index.html">Home</a>
+  </nav>
+ </header>
+
+  <main>
+   <form
+     action= "/formtest.php"
+     onsubmit="return verify();"
+     method= "post" >
+     <label>Email Address
+     <input type="text"
+      name="email" id="email"
+      size="25"/>
+    </label><br>
+    <input type="Submit" value="submit">
+
+   </form>
+  </main>
+ 
+</html>

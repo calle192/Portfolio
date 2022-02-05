@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Stacking Images</title>
+   <meta charset="UTF-8"/>
+  
+
+   <style type= "text/css">
+    #nav { border: 1px solid black;
+           background-color:grey;}
+    
+   body {background-color: lightgrey;}
+    h1 {position: relative;
+        top:395px;     
+        margin: auto;
+        border: black solid 1px;
+        width: 500px;
+        background-color: tan;}
+
+    p {position: relative;
+       top: 400px;
+       width: 800px;
+       margin: auto;
+       border: black solid 1px;
+       background-color: white;}
+
+    img { position: absolute;
+          top:20px;
+          left:20px;
+          overflow:auto;
+          float:left; }
+    
+    #view {position:relative;
+           width: 364px;
+            margin: auto;}
+        
+    #button {position: absolute;
+             top:298px;
+             left:110px;
+             overflow:auto;
+             margin: 10px;
+             clear:left;
+             width: 364px;
+            }    
+   </style>
+ 
+  </head>
+<body>
+<div id = "nav">
+<nav>
+ <a href= "index.html">Home Page</a>
+</nav>
+</div>
+
+
+ 
+ <script type="text/javascript">
+ <!--
+ //<![CDATA[
+ var i = 0;
+ function cycle(){
+   if(i == 0){
+    hT(); 
+    i++;
+   }
+   else if(i == 1){
+    pT();
+    i++;
+   }
+   else if(i == 2){
+    cT();
+    i = 0;
+   }
+ };
+ function change(){
+  var h = document.getElementById("hoe").style.visibility;
+  var c = document.getElementById("chisel").style.visibility;
+  var p = document.getElementById("pitchfork").style.visibility;
+  if(h == "visible"){
+     cT();
+   
+  }
+  else if(c == "visible"){
+    pT();
+   
+  }
+  else if(p == "visible"){
+    hT();
+   
+  }
+  
+   };
+ 
+
+ 
+ function cT(){
+  document.getElementById("pitchfork").style.visibility = "hidden";
+  document.getElementById("chisel").style.visibility="visible";
+  document.getElementById("hoe").style.visibility ="hidden";
+ };
+
+ function hT(){
+  document.getElementById("pitchfork").style.visibility="hidden";
+  document.getElementById("chisel").style.visiblity="hidden";
+  document.getElementById("hoe").style.visibility="visible";
+ };
+
+ function pT(){
+  document.getElementById("pitchfork").style.visibility="visible";
+  document.getElementById("chisel").style.visibility="hidden";
+  document.getElementById("hoe").style.visibility="hidden";
+ };
+ //]]>
+ //-->>
+</script>
+<div id="view">  
+  <img src="/tools/chisels.jpg"
+     id = "chisel"
+     style="visibility: visible"
+     width="364"
+     height="248"
+     alt="Picture of a chisel">
+  
+ 
+  <img src="/tools/pitchfork.jpg"
+     id = "pitchfork"
+     style="visibility: hidden"
+     width= "364"
+     height="248"
+     alt="Picture of a pitchfork">
+
+ 
+  <img src="/tools/hoe.jpg"
+       id = "hoe"
+       style="visibility: hidden"
+       width="364"
+       height="248"
+       alt="picture of a hoe">
+  <div id="button">
+  <input type="button" value="Next" onclick = "cycle();">
+  
+ </div>
+</div>
+<h1>Two Reasons for Sequences of Images</h1>
+<p> Cycling through images can be used for various reasons. One reason I could think of is a game for kids. You could make a game where little kids could match an image to another image. 
+    You could make a game where they have to make a picture with a series of images like a puzzle. Or perhaps a game where the image they have to select is the answer to a question.
+   Another reason for images that cycle with a button would be a site that sells something. A good example is amazon. When you look at an item to buy it often comes with multiple pictures
+  that you cycle through with a click of a button.
+</p>
+
+</body>
+</html>
