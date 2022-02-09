@@ -1,4 +1,5 @@
-nav ul {display:inline-block;}
+nav ul { list-style-type: none;
+         display:inline-block;}
 h1 {font-family:sans-serif;
     text-align: center;}
 
